@@ -1,0 +1,268 @@
+.login-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 10s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  background: #25F4EE;
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 350px;
+  height: 350px;
+  background: #FE2C55;
+  bottom: -80px;
+  right: -80px;
+  animation-delay: -3s;
+}
+
+.circle-3 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #25F4EE, #FE2C55);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 30px) scale(1.05);
+  }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background: rgba(18, 18, 18, 0.95) !important;
+  border: 1px solid #2f2f2f !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+              0 0 40px rgba(37, 244, 238, 0.1),
+              0 0 40px rgba(254, 44, 85, 0.1) !important;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #25F4EE, #FE2C55);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #000;
+  box-shadow: 0 8px 24px rgba(37, 244, 238, 0.3),
+              0 8px 24px rgba(254, 44, 85, 0.3);
+}
+
+.logo-icon svg {
+  font-size: 36px;
+}
+
+.login-header h2 {
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #25F4EE, #FE2C55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.login-subtitle {
+  color: #8c8c8c;
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #666;
+  font-size: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #2f2f2f;
+}
+
+/* 覆盖 Ant Design 输入框样式 */
+.login-card .ant-input,
+.login-card .ant-input-password {
+  background-color: #1a1a1a !important;
+  border-color: #333 !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+}
+
+.login-card .ant-input:focus,
+.login-card .ant-input-password:focus,
+.login-card .ant-input-focused {
+  border-color: #25F4EE !important;
+  box-shadow: 0 0 0 2px rgba(37, 244, 238, 0.2) !important;
+}
+
+.login-card .ant-input-prefix {
+  color: #25F4EE !important;
+}
+
+.login-card .ant-btn-primary {
+  background: linear-gradient(90deg, #25F4EE, #FE2C55) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 24px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.login-card .ant-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 244, 238, 0.3),
+              0 8px 20px rgba(254, 44, 85, 0.3) !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 16px;
+  }
+
+  .login-card {
+    padding: 24px 20px;
+    border-radius: 12px !important;
+  }
+
+  .login-header {
+    margin-bottom: 24px;
+  }
+
+  .logo-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .logo-icon svg {
+    font-size: 28px;
+  }
+
+  .login-header h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .login-subtitle {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .login-card .ant-input,
+  .login-card .ant-input-password {
+    padding: 10px 12px !important;
+  }
+
+  .login-card .ant-btn-primary {
+    padding: 16px !important;
+    font-size: 15px !important;
+  }
+
+  .login-footer {
+    margin-top: 16px;
+    padding-top: 16px;
+    font-size: 11px;
+  }
+
+  /* 移动端背景动画缩小 */
+  .circle-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 12px;
+  }
+
+  .login-card {
+    padding: 20px 16px;
+  }
+
+  .login-header h2 {
+    font-size: 20px;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .logo-icon svg {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,40 @@
+.user-management {
+  padding: 20px;
+}
+
+.user-management .ant-card {
+  background-color: #1a1a1a !important;
+  border-color: #2f2f2f !important;
+}
+
+.user-management .ant-table {
+  background-color: transparent !important;
+}
+
+.user-management .ant-table-thead > tr > th {
+  background-color: #25F4EE !important;
+  color: #000 !important;
+  border-color: #2f2f2f !important;
+}
+
+.user-management .ant-table-tbody > tr > td {
+  border-color: #2f2f2f !important;
+  color: #fff !important;
+}
+
+.user-management .ant-table-tbody > tr:hover > td {
+  background-color: #2a2a2a !important;
+}
+
+.btn-edit.ant-btn-link {
+  color: #faad14 !important;
+}
+
+.btn-edit.ant-btn-link:hover {
+  color: #d48806 !important;
+}
+
+.btn-edit.ant-btn-link:disabled {
+  color: #8c8c8c !important;
+  cursor: not-allowed;
+}
